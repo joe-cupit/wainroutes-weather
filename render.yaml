@@ -1,0 +1,13 @@
+services:
+  - type: cron
+    name: weather-updater
+    env: python
+    plan: free
+    schedule: "0 5,19 * * *"  # every day at 05:00 and 19:00 UTC
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: R2_ACCESS_KEY
+        value: ${R2_ACCESS_KEY}
+      - key: R2_SECRET_KEY
+        value: ${R2_SECRET_KEY}
