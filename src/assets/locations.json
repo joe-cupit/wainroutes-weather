@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Helvellyn Summit",
+    "coords": [54.5269, -3.0161],
+    "summit": true
+  },
+  {
+    "name": "The Old Man of Coniston Summit",
+    "coords": [54.3705, -3.1201],
+    "summit": true
+  },
+  {
+    "name": "Grisedale Pike Summit",
+    "coords": [54.5916, -3.2407],
+    "summit": true
+  },
+  {
+    "name": "High Street Summit",
+    "coords": [54.4916, -2.8635],
+    "summit": true
+  },
+  {
+    "name": "Fairfield Summit",
+    "coords": [54.497, -2.9902],
+    "summit": true
+  },
+  {
+    "name": "High Stile Summit",
+    "coords": [54.5212, -3.2861],
+    "summit": true
+  },
+  {
+    "name": "High Raise Summit",
+    "coords": [54.4758, -3.1099],
+    "summit": true
+  },
+  {
+    "name": "Great Gable Summit",
+    "coords": [54.482, -3.2179],
+    "summit": true
+  },
+  {
+    "name": "Scafell Pike Summit",
+    "coords": [54.4549, -3.2111],
+    "summit": true
+  },
+  {
+    "name": "Bowfell Summit",
+    "coords": [54.4477, -3.1648],
+    "summit": true
+  },
+  {
+    "name": "Skiddaw Summit",
+    "coords": [54.6479, -3.1449],
+    "summit": true
+  },
+  {
+    "name": "Dollywagon Pike Summit",
+    "coords": [54.5086, -3.0098],
+    "summit": true
+  },
+  {
+    "name": "Blencathra Summit",
+    "coords": [54.6398, -3.0484],
+    "summit": true
+  },
+  {
+    "name": "Whinlatter Visitor Centre",
+    "coords": [54.6062, -3.2014],
+    "summit": true
+  }
+]

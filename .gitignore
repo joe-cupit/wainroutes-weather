@@ -1,7 +1,12 @@
 # python & IDE
 .vscode/*
+venv/
 __pycache__/
 *.pyc
 
 # environment
 .env
+
+# output files
+weather.json
+weather_points.json
