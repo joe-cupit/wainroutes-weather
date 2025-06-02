@@ -172,16 +172,16 @@ def define_visibility_type(visibility: int):
 def request_weather_points(save_local=False):
   result = {}
 
-  log.info("Getting weather data for individual locations")
+  log.info("Requesting weather data for individual locations")
   with open("src/assets/locations.json", "r") as f:
     for loc in json.load(f):
       result[loc["name"]] = get_weather_at_point(loc["coords"][0], loc["coords"][1])
   
   if save_local:
+    log.info("Saving weather_points.json as a local file")
     with open("weather_points.json", "w") as f:
       json.dump(result, f)
   
-  log.info("Finished getting weather data for individual locations")
   return result
 
 

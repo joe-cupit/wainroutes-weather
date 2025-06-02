@@ -11,7 +11,7 @@ log = logging.getLogger(__name__)
 
 
 def scrape_met_site(save_local=False):
-  log.info("Starting Met Office weather scrape")
+  log.info("Scraping Met Office weather data")
   response = requests.get(os.environ["MET_OFFICE_WEATHER_URL"])
   if response.status_code != 200:
     log.error(f"Failed to retrieve data. Status code: {response.status_code}")
@@ -21,10 +21,10 @@ def scrape_met_site(save_local=False):
   scraped = scrape_soup(soup)
 
   if save_local:
+    log.info("Saving weather.json as a local file")
     with open("weather.json", "w") as f:
       json.dump(scraped, f)
 
-  log.info("Finished souping")
   return scraped
 
 
