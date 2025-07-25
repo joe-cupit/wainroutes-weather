@@ -101,11 +101,11 @@ def parse_weather_at_point(weather_data: dict):
     day_precipitation_types = {
       "rain": day["dayProbabilityOfRain"], "snow": day["dayProbabilityOfSnow"], "hail": day["dayProbabilityOfHail"]
     }
-    day_predominant_precipitaion_type = max(day_precipitation_types, key=day_precipitation_types.get)
+    day_predominant_precipitaion_type = max(day_precipitation_types.keys(), key=lambda k: day_precipitation_types[k])
     night_precipitation_types = {
       "rain": day["nightProbabilityOfRain"], "snow": day["nightProbabilityOfSnow"], "hail": day["nightProbabilityOfHail"]
     }
-    night_predominant_precipitaion_type = max(night_precipitation_types, key=night_precipitation_types.get)
+    night_predominant_precipitaion_type = max(night_precipitation_types.keys(), key=lambda k: night_precipitation_types[k])
 
     day_data = {
       "date": str(date),
@@ -180,7 +180,7 @@ def request_weather_points(save_local=False):
   if save_local:
     log.info("Saving weather_points.json as a local file")
     with open("weather_points.json", "w") as f:
-      json.dump(result, f)
+      json.dump(result, f, indent=2)
   
   return result
 
