@@ -88,6 +88,17 @@ def scrape_day_forecast(forecast: Tag):
   temp_table = forecast.find(class_="feels-temperature-table").find("table")
   temp_feels = [t["data-temp"] for t in temp_table.find("tbody").find("tr").find_all("td")]
 
+  # trim all lists to only include data from 06:00 onwards
+  six_am = times.index("06:00")
+  if (six_am > 0):
+    times = times[six_am:]
+    weather_types = weather_types[six_am:]
+    precip_chances = precip_chances[six_am:]
+    wind_speeds = wind_speeds[six_am:]
+    wind_gusts = wind_gusts[six_am:]
+    wind_dirs = wind_dirs[six_am:]
+    temps = temps[six_am:]
+    temp_feels = temp_feels[six_am:]
 
   return {
     "time": times,
